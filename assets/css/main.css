@@ -1119,6 +1119,10 @@ p:last-child {
   font-size: 0.95rem;
 }
 
+.footer-about + .footer__contact {
+  margin: 1rem 0 0;
+}
+
 .footer__contact .icon {
   width: 18px;
   height: 18px;
@@ -3862,6 +3866,22 @@ p:last-child {
   font-size: 1.12rem;
   font-weight: 800;
   color: var(--ink);
+}
+
+.channel__link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+.channel__link:hover {
+  color: var(--purple-600);
+}
+
+.channel--highlight .channel__link:hover {
+  color: var(--teal-300);
 }
 
 .channel__value--pending {

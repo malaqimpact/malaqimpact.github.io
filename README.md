@@ -83,8 +83,8 @@ marked for your input. In summary:
    photos, for example
    `<img src="assets/images/hero.jpg" alt="Young women at a digital safety workshop" />`.
 2. **Contact form endpoint** (`contact.html`): currently points to
-   `https://formspree.io/f/YOUR_FORM_ID`. Once you have your domain email
-   (e.g. `info@yourdomain.org`):
+   `https://formspree.io/f/YOUR_FORM_ID`. Once the `info@malaq.org` mailbox
+   exists in Zoho:
    1. Create a free account at [formspree.io](https://formspree.io).
    2. Create a new form using that email as the recipient.
    3. Copy the endpoint URL Formspree gives you and paste it into the
@@ -97,8 +97,10 @@ marked for your input. In summary:
 4. **Other support services** (`get-help.html`): national GBV helpline, police,
    legal aid and counselling contacts, plus the emergency number in the red
    card. Verify each with a live source before publishing.
-5. **Contact channels** (`contact.html`): get help, general, partnerships and
-   media addresses (shown as `+256 XXX XXX XXX` and `...@[yourdomain].org`).
+5. **Phone numbers** (`contact.html`, `get-help.html`): shown as
+   `+256 XXX XXX XXX`. The email addresses are already set to
+   `info@`, `help@`, `partnerships@`, `media@` and `safeguarding@malaq.org`
+   (create these five mailboxes in Zoho).
 6. **Impact figures shown as XX** (`index.html`, `our-work.html`): Malaq's own
    programme results (people reached, survivors supported, sessions, outputs).
    Replace them only with verified figures. To animate a number, add
@@ -111,7 +113,7 @@ marked for your input. In summary:
 7. **Team and governance** (`team.html`): leadership photos, names, roles and
    biographies; board and advisors (remove that section if not applicable).
 8. **Safeguarding** (`safeguarding.html`): link each policy PDF once approved,
-   and add the safeguarding contact email and phone.
+   and add the safeguarding contact phone.
 9. **Partner logos** (`index.html`, `get-involved.html`): replace the
    placeholders with confirmed partners only.
 10. **Resources** (`resources.html`): replace the "Coming soon" cards with real
@@ -122,27 +124,30 @@ marked for your input. In summary:
 13. **Mission and vision** (`about.html`): confirm the final wording with
     leadership.
 
-## Attaching your custom domain
+## Hosting and domain
 
-1. Buy your domain (e.g. from Namecheap, GoDaddy, etc.).
-2. In the repo, create a file named `CNAME` (no extension) at the project
-   root containing just your domain, e.g.:
-   ```
-   www.malaqimpact.org
-   ```
-3. In GitHub, under repo **Settings > Pages**, add the same custom domain and
-   enable "Enforce HTTPS" once it's available (GitHub provisions a free TLS
-   certificate automatically).
-4. At your domain registrar, point the domain at GitHub Pages:
-   - For an apex domain (`malaqimpact.org`): add `A` records pointing to
-     GitHub's Pages IPs (listed in GitHub's Pages custom-domain docs).
-   - For a `www` subdomain: add a `CNAME` record pointing to
-     `<your-github-username>.github.io`.
+- **Repository:** [github.com/malaqimpact/malaqimpact.github.io](https://github.com/malaqimpact/malaqimpact.github.io),
+  owned by the `malaqimpact` GitHub organisation.
+- **GitHub address:** https://malaqimpact.github.io/
+- **Domain:** `malaq.org`, registered with Namecheap, DNS managed in
+  **Cloudflare**. All DNS records (website and email) are edited in Cloudflare.
 
-Note: this GitHub account already has an account-wide custom domain
-(`allans.engineer`) configured, which auto-redirects Pages sites on this
-account. Adding this project's own `CNAME` file will override that redirect
-for this repo specifically once you're ready to use the NGO's real domain.
+DNS records for the website (Cloudflare, proxy status **DNS only**, grey cloud):
+
+| Type  | Name  | Content                  |
+|-------|-------|--------------------------|
+| A     | `@`   | `185.199.108.153`        |
+| A     | `@`   | `185.199.109.153`        |
+| A     | `@`   | `185.199.110.153`        |
+| A     | `@`   | `185.199.111.153`        |
+| AAAA  | `@`   | `2606:50c0:8000::153`    |
+| AAAA  | `@`   | `2606:50c0:8001::153`    |
+| AAAA  | `@`   | `2606:50c0:8002::153`    |
+| AAAA  | `@`   | `2606:50c0:8003::153`    |
+| CNAME | `www` | `malaqimpact.github.io`  |
+
+The `CNAME` file in the repo root holds `malaq.org`. Keep "Enforce HTTPS"
+switched on under **Settings > Pages**.
 
 ## Security notes
 
@@ -172,11 +177,7 @@ back button won't return to this site. This is standard practice on
 GBV-support websites. You can change the destination URL by editing
 `QuickExit.DESTINATION` in `assets/js/classes/QuickExit.js`.
 
-## Deploying to GitHub Pages
+## Deploying
 
-1. Push this repository to GitHub (public repo, so Pages is free).
-2. Go to **Settings > Pages**.
-3. Under "Build and deployment", set **Source** to `Deploy from a branch`,
-   branch `main`, folder `/ (root)`.
-4. Save. Your site will be live at
-   `https://<username>.github.io/<repo-name>/` within a minute or two.
+GitHub Pages deploys automatically from the `main` branch root. Push a change
+and the live site updates within a minute or two.
