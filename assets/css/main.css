@@ -4096,6 +4096,60 @@ a.resource-card:hover {
   transform: translateY(-4px);
 }
 
+/* Founder feature */
+.founder {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 5.5rem);
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .founder {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  }
+}
+
+.founder__photo {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  isolation: isolate;
+}
+
+/* Offset outline behind the portrait panel. */
+.founder__photo::before {
+  content: "";
+  position: absolute;
+  inset: 1.1rem -1.1rem -1.1rem 1.1rem;
+  z-index: -1;
+  border: 1px solid var(--purple-200);
+  border-radius: var(--r-xl);
+}
+
+.founder__photo picture {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--r-xl);
+  background: linear-gradient(165deg, var(--purple-100), var(--teal-100));
+}
+
+/* The studio photo has a white background: multiply lets the tinted
+   panel show through it, so the portrait reads as a cut-out. */
+.founder__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  mix-blend-mode: multiply;
+}
+
+.founder__name {
+  margin-bottom: 1rem;
+}
+
 /* Bio cards */
 .bio-card .ph--avatar {
   margin-bottom: 1.25rem;
