@@ -113,8 +113,10 @@ marked for your input. In summary:
 7. **Team and governance** (`team.html`): the Founder and Chair's profile is
    live (photo in `assets/images/founder.*`). Her biography was written from
    two facts (degree, profession), so expand it with her approved wording.
-   Leadership photos, names, roles and biographies, and the board and
-   advisors, are placeholders (remove that section if not applicable).
+   Other team members show a photo, name and role only (no biography). The
+   Secretary is added; to add more, copy a `.member` card and put a 4:5
+   portrait in `assets/images/team/`. Remaining leadership cards and the
+   board and advisors are placeholders (remove any that are not needed).
 8. **Safeguarding** (`safeguarding.html`): link each policy PDF once approved,
    and add the safeguarding contact phone.
 9. **Partner logos** (`index.html`, `get-involved.html`): replace the

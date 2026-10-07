@@ -84,25 +84,36 @@
           <p class="lead" data-reveal data-reveal-delay="1">The team responsible for Malaq's strategy, programmes and day-to-day operations.</p>
         </div>
 
-        <!-- TODO: replace each placeholder with a photo, name, role and short professional biography. -->
-        <div class="grid grid--3">
-          <article class="card bio-card" data-reveal>
-            <div class="ph ph--avatar"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Photo</span></div></div>
-            <h3>Name to be added</h3>
-            <p class="bio-card__role">Role</p>
-            <p>A short professional biography will appear here: background, expertise and focus at Malaq.</p>
+        <!--
+          To add a team member: copy a .member card, put a 4:5 portrait in
+          assets/images/team/ and set the name and role. Photos with a white
+          background blend into the tinted panel automatically.
+        -->
+        <div class="grid grid--members">
+          <article class="member" data-reveal>
+            <figure class="member__photo">
+              <picture>
+                <source type="image/webp" srcset="assets/images/team/atim-moureen-360.webp 360w, assets/images/team/atim-moureen.webp 720w" sizes="(min-width: 1024px) 290px, (min-width: 768px) 30vw, 45vw" />
+                <img src="assets/images/team/atim-moureen.jpg" srcset="assets/images/team/atim-moureen-360.jpg 360w, assets/images/team/atim-moureen.jpg 720w" sizes="(min-width: 1024px) 290px, (min-width: 768px) 30vw, 45vw" width="720" height="900" loading="lazy" alt="Atim Moureen, Secretary of Malaq Impact Initiative" />
+              </picture>
+            </figure>
+            <h3>Atim Moureen</h3>
+            <p class="member__role">Secretary</p>
           </article>
-          <article class="card bio-card" data-reveal data-reveal-delay="1">
-            <div class="ph ph--avatar"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Photo</span></div></div>
+          <article class="member" data-reveal data-reveal-delay="1">
+            <figure class="member__photo"><div class="ph"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Photo</span></div></div></figure>
             <h3>Name to be added</h3>
-            <p class="bio-card__role">Role</p>
-            <p>A short professional biography will appear here: background, expertise and focus at Malaq.</p>
+            <p class="member__role">Role</p>
           </article>
-          <article class="card bio-card" data-reveal data-reveal-delay="2">
-            <div class="ph ph--avatar"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Photo</span></div></div>
+          <article class="member" data-reveal data-reveal-delay="2">
+            <figure class="member__photo"><div class="ph"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Photo</span></div></div></figure>
             <h3>Name to be added</h3>
-            <p class="bio-card__role">Role</p>
-            <p>A short professional biography will appear here: background, expertise and focus at Malaq.</p>
+            <p class="member__role">Role</p>
+          </article>
+          <article class="member" data-reveal data-reveal-delay="3">
+            <figure class="member__photo"><div class="ph"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Photo</span></div></div></figure>
+            <h3>Name to be added</h3>
+            <p class="member__role">Role</p>
           </article>
         </div>
       </div>
@@ -120,26 +131,26 @@
         </div>
 
         <!-- TODO: add board and advisory members, or remove this section if not applicable. -->
-        <div class="grid grid--4 grid--team">
-          <article class="team-card" data-reveal>
-            <div class="ph ph--avatar"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Photo</span></div></div>
+        <div class="grid grid--members">
+          <article class="member" data-reveal>
+            <figure class="member__photo"><div class="ph"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Photo</span></div></div></figure>
             <h3>Name to be added</h3>
-            <p>Board member</p>
+            <p class="member__role">Board member</p>
           </article>
-          <article class="team-card" data-reveal data-reveal-delay="1">
-            <div class="ph ph--avatar"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Photo</span></div></div>
+          <article class="member" data-reveal data-reveal-delay="1">
+            <figure class="member__photo"><div class="ph"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Photo</span></div></div></figure>
             <h3>Name to be added</h3>
-            <p>Board member</p>
+            <p class="member__role">Board member</p>
           </article>
-          <article class="team-card" data-reveal data-reveal-delay="2">
-            <div class="ph ph--avatar"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Photo</span></div></div>
+          <article class="member" data-reveal data-reveal-delay="2">
+            <figure class="member__photo"><div class="ph"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Photo</span></div></div></figure>
             <h3>Name to be added</h3>
-            <p>Advisor</p>
+            <p class="member__role">Advisor</p>
           </article>
-          <article class="team-card" data-reveal data-reveal-delay="3">
-            <div class="ph ph--avatar"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Photo</span></div></div>
+          <article class="member" data-reveal data-reveal-delay="3">
+            <figure class="member__photo"><div class="ph"><div class="ph__inner"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#user"></use></svg><span>Photo</span></div></div></figure>
             <h3>Name to be added</h3>
-            <p>Advisor</p>
+            <p class="member__role">Advisor</p>
           </article>
         </div>
       </div>
