@@ -110,9 +110,10 @@ marked for your input. In summary:
    The Uganda statistics are already filled in with sourced figures (Pollicy
    2020, DataReportal Digital 2026, GSMA Mobile Gender Gap Report 2026). Review
    them each year and update the number, label and source link together.
-7. **Team and governance** (`team.html`): the Founder and Chair's photo is in
-   place (`assets/images/founder.*`); her name and biography still need
-   adding. Leadership photos, names, roles and biographies, and the board and
+7. **Team and governance** (`team.html`): the Founder and Chair's profile is
+   live (photo in `assets/images/founder.*`). Her biography was written from
+   two facts (degree, profession), so expand it with her approved wording.
+   Leadership photos, names, roles and biographies, and the board and
    advisors, are placeholders (remove that section if not applicable).
 8. **Safeguarding** (`safeguarding.html`): link each policy PDF once approved,
    and add the safeguarding contact phone.
