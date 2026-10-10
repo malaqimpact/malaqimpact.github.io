@@ -12,7 +12,7 @@ database) so it can be hosted directly on GitHub Pages.
 index.html              Home: hero, issue, 10 forms, why Uganda, approach,
                         programmes, survivors, impact, resources, partners
 about.html              Who we are, mission, vision, who we work with
-team.html               Leadership, board and advisors, values
+team.html               Founder profile, leadership team, values
 safeguarding.html       Safeguarding commitments, policies, raising a concern
 the-issue.html          Definition, the 10 forms, why Uganda, harm
 our-work.html           Three pillars, five programme areas, impact
@@ -110,13 +110,12 @@ marked for your input. In summary:
    The Uganda statistics are already filled in with sourced figures (Pollicy
    2020, DataReportal Digital 2026, GSMA Mobile Gender Gap Report 2026). Review
    them each year and update the number, label and source link together.
-7. **Team and governance** (`team.html`): the Founder and Chair's profile is
-   live (photo in `assets/images/founder.*`). Her biography was written from
-   two facts (degree, profession), so expand it with her approved wording.
-   Other team members show a photo, name and role only (no biography). The
-   Secretary is added; to add more, copy a `.member` card and put a 4:5
-   portrait in `assets/images/team/`. Remaining leadership cards and the
-   board and advisors are placeholders (remove any that are not needed).
+7. **Team** (`team.html`): the Founder and Chair has a full profile (photo in
+   `assets/images/founder.*`). Her biography was written from two facts
+   (degree, profession), so expand it with her approved wording. Other team
+   members show a photo, name and role only (no biography). To add one, copy
+   a `.member` card and put a 4:5 portrait in `assets/images/team/`; add the
+   `member__photo--plain` class if the photo does not have a white background.
 8. **Safeguarding** (`safeguarding.html`): link each policy PDF once approved,
    and add the safeguarding contact phone.
 9. **Partner logos** (`index.html`, `get-involved.html`): replace the
@@ -176,7 +175,8 @@ switched on under **Settings > Pages**.
 ## The "Quick Exit" safety feature
 
 A red **Quick exit** button appears in the header on every page. Clicking it
-(or pressing `Escape` three times quickly) hides the page instantly and redirects to
+(or pressing `Escape` three times quickly, a shortcut hinted only on
+devices with a keyboard) hides the page instantly and redirects to
 `https://www.google.com` and *replaces* the current history entry, so the
 back button won't return to this site. This is standard practice on
 GBV-support websites. You can change the destination URL by editing

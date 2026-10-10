@@ -3165,33 +3165,6 @@ p:last-child {
   transform: translateY(-3px);
 }
 
-/* Team */
-.grid--team {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-@media (min-width: 1024px) {
-  .grid--team {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 639px) {
-  .team-card h3 {
-    font-size: 1rem;
-  }
-}
-
-.team-card h3 {
-  margin: 1.1rem 0 0.2rem;
-}
-
-.team-card p {
-  margin: 0;
-  font-size: 0.92rem;
-  color: var(--ink-3);
-}
-
 /* Posts */
 .post-featured {
   display: grid;
@@ -4202,15 +4175,11 @@ a.resource-card:hover {
   gap: clamp(1rem, 2.4vw, 1.75rem);
 }
 
-@media (min-width: 768px) {
+/* Fixed-width cards, centred, so a small team never looks lopsided. */
+@media (min-width: 640px) {
   .grid--members {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid--members {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(0, 280px));
+    justify-content: center;
   }
 }
 
@@ -4235,6 +4204,11 @@ a.resource-card:hover {
   object-position: center top;
   mix-blend-mode: multiply;
   transition: transform 0.7s var(--ease);
+}
+
+/* For photos that do not have a white background. */
+.member__photo--plain img {
+  mix-blend-mode: normal;
 }
 
 @media (hover: hover) {
@@ -4269,26 +4243,16 @@ a.resource-card:hover {
   }
 }
 
-/* Bio cards */
-.bio-card .ph--avatar {
-  margin-bottom: 1.25rem;
-}
-
-.bio-card__role {
-  margin: 0 0 0.75rem;
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--teal-700);
-}
-
-.bio-card p:last-child {
-  font-size: 0.93rem;
-  color: var(--ink-3);
-}
-
 /* Utilities: last in the cascade so they win over component defaults. */
+
+/* Keyboard shortcuts mean nothing on a phone or tablet, so any text that
+   mentions one is hidden on touch devices. */
+@media (hover: none), (pointer: coarse) {
+  .kbd-only {
+    display: none !important;
+  }
+}
+
 .mt-lg {
   margin-top: clamp(2rem, 4vw, 3rem);
 }
